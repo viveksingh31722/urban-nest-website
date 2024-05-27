@@ -89,6 +89,7 @@ export default function Profile() {
       }
 
       dispatch(updateUserSuccess(data));
+      setFormData({ ...formData, avatar: downloadURL });
       setUpdateSuccess(true);
     } catch (error) {
       dispatch(updateUserFailure(error.message));
